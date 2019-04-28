@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Activity 2 - Vue</title>
+</head>
+<body>
+
+  <!-- create html template you want Vue to use -->
+  <div id="app">
+    <!-- this is associated with data.headline property -->
+    <h1> {{ headline }}</h1>
+    <!-- this is associated with data.subtitle property  -->
+    <h3> {{ subtitle }}</h3>
+    <!-- this is associated with data.body property -->
+    <p> {{ body }} </p>
+    <!-- these two are associated with the data.link property -->
+    <a v-bind:href="link.url">{{ link.text }}</a>
+  </div>
+  
+  <!-- Add Vue's script tag -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="first-vue.js"></script>
+</body>
+</html>
