@@ -25,14 +25,13 @@
 
 ## 1. Welcome Class and Start Slideshow (Why Frontend Frameworks? - How did we get here?) - 3 minutes
 
-
 - Use the slides to briefly explain the history of our relationship with the Browser/DOM. We used to be incredibly limited as to how we made pages react to any type of change in data or UI because of technical limitations.
 - When browsers "grew up" and matured they gave us a lot more control and power, letting us create data-shifting applications that didn't require us reloading the page or unnecessarily communicating with our backend servers to get new information in front of our users.
 - Remind students about how we have used HTML5 `data-` attributes and jQuery's `.attr()` and `.data()` to package up an HTML element's related data with it in the DOM and then we bind event listeners to certain HTML elements to retrieve that data back into our JavaScript code to manipulate it and reprint information to the page as a result.
 - Use this as a moment to ask the class the following question just to remind them: **Who Manages the DOM?**
 - **ANSWER: The Browser**
 
-## 2. Instructor: Slideshow (More power = more responsibility slides) - 5 Minutes
+## 2. Instructor: Slideshow (More power = more responsibility slides) - 4 Minutes
 
 - Use these slides to explain how while we've been able to cut communication with our backend servers down significantly because of this, it also means that our frontend codebase is effectively separated into two loosely-coupled halves where the Browser/DOM maintain the data and our JavaScript files maintain the functionality used to SET/GET that data from the browser (`document.methodName` or `$().methodName()`)
 - Explain that this isn't a "terrible" way of doing things, students may feel like they've been lied to if we tell them this is a totally bad way of writing applications considering they've been doing it this way throughout the entirety of the course.
@@ -55,7 +54,7 @@
 - It is described as a "progressive framework", meaning you can start adding pieces of it into your existing frontend codebase one by one and not disrupt your overall application. This is unlike other frameworks which recommend a total adoption for it work properly.
 - Since it came a little later than other frameworks and was built by a former Google employee (Google owns Angular), it is sometimes considered a "greatest-hits" collection of its peers as it has borrowed a lot of the great ideas they brought to the table and tried to simplify them into a smaller ecosystem (~24kb, which is small)
 
-## 5: Instructor: Slideshow (Getting Up and Running) - 3 Minutes
+## 5: Instructor: Slideshow (Getting Up and Running) - 1 Minutes
 
 - Navigate through the next slide and explain how we can get up and running with Vue in two different ways:
   - Including Vue's `<script>` tag in your HTML file and using their special templating syntax (think Handlebars)
@@ -148,7 +147,7 @@
 - Let them know we'll be touching upon the most important ones today, one-by-one
 - At first glance one might think this is an interesting design choice to make the syntax have the `v-`, but it makes it easier to glance at one's HTML structure and notice what's controlled by it's Vue counterpart fairly quick.
 
-## 10. Partners: Add Comments to `v-` Examples - 20 minutes
+## 10. Partners: Add Comments to `v-` Examples - 18 minutes
 
 ### Instructions
 
