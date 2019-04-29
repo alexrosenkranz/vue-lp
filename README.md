@@ -1,17 +1,18 @@
-# Frontend Framework-it: An Introduction to Vue.js
+# Front-end Framework-it: An Introduction to Vue.js
 
-> The following lesson plan is assuming students have NOT learned React and this is their first introduction to a true frontend framework. It also assumes students HAVE gone through the Handlebars/templating unit, but mostly for the `{{ }}` familiarity, and that our current heavy usage of jQuery is in use over vanilla JS for DOM manipulation.
+> The following lesson plan is assuming students have NOT learned React and this is their first introduction to a true front-end framework. It also assumes students HAVE gone through the Handlebars/templating unit, but mostly for the `{{ }}` familiarity, and that our current heavy usage of jQuery is in use over vanilla JS for DOM manipulation.
 
 ## Class Objectives
 
-- Students will be formally introduced to the concept of frontend frameworks, what problems they help developers with, and why they're so popular in modern web development
-- Students will use learn how to integrate Vue into an existing application and how to start from scratch
-- Students will learn Vue's special `v-` "directive" attribute syntax to bind data, styles, and functionality to associated HTML tags
-- NEXT CLASS → Students will be introduced to the Vue CLI tool to help scaffold out more modular Vue applications that help with organization and structure
+- Students will be formally introduced to the concept of front-end frameworks, what problems they help developers with, and why they're so popular in modern web development.
+- Students will use learn how to integrate Vue into an existing application and how to start from scratch.
+- Students will learn Vue's special `v-` "directive" attribute syntax to bind data, styles, and functionality to associated HTML tags.
+- Students will learn about the concept of building components so pieces of the UI can be reused.
+- NEXT CLASS → Students will be introduced to the Vue CLI tool to help scaffold out more modular Vue applications that help with organization and structure.
 
 ## Instructor Notes
 
-- Today's class is all about getting the students to understand that while how they've been building their applications to this point isn't wrong (we obviously made it this far without frontend frameworks), more data-rich applications are beginning to require a more organized and performant way of managing their frontend code.
+- Today's class is all about getting the students to understand that while how they've been building their applications to this point isn't wrong (we obviously made it this far without front-end frameworks), more data-rich applications are beginning to require a more organized and performant way of managing their client-side code.
 - This will involve giving a very brief overview of a developer's relationship with the DOM and how asking the browser to be so heavily involved in managing our data can slow things up overtime in both performance and development time in general.
 - Let the class know that today we will be introducing the concept of how Vue works with its special `v-` syntax and how we can build HTML templates that are managed by utilizing a special constructor in the JavaScript code.
 - Also let them know this won't be the main way they end up building out Vue applications and we'll get to that in the next class, but it's important to see how simple it can be to integrate its code into an already existing application so they aren't as intimidated by the unfamiliarity of it.
@@ -23,7 +24,7 @@
 
 ---
 
-## 1. Welcome Class and Start Slideshow (Why Frontend Frameworks? - How did we get here?) - 3 minutes
+## 1. Welcome Class and Start Slideshow (Why front-end Frameworks? - How did we get here?) - 3 minutes
 
 - Use the slides to briefly explain the history of our relationship with the Browser/DOM. We used to be incredibly limited as to how we made pages react to any type of change in data or UI because of technical limitations.
 - When browsers "grew up" and matured they gave us a lot more control and power, letting us create data-shifting applications that didn't require us reloading the page or unnecessarily communicating with our backend servers to get new information in front of our users.
@@ -33,7 +34,7 @@
 
 ## 2. Instructor: Slideshow (More power = more responsibility slides) - 4 Minutes
 
-- Use these slides to explain how while we've been able to cut communication with our backend servers down significantly because of this, it also means that our frontend codebase is effectively separated into two loosely-coupled halves where the Browser/DOM maintain the data and our JavaScript files maintain the functionality used to SET/GET that data from the browser (`document.methodName` or `$().methodName()`)
+- Use these slides to explain how while we've been able to cut communication with our backend servers down significantly because of this, it also means that our front-end codebase is effectively separated into two loosely-coupled halves where the Browser/DOM maintain the data and our JavaScript files maintain the functionality used to SET/GET that data from the browser (`document.methodName` or `$().methodName()`)
 - Explain that this isn't a "terrible" way of doing things, students may feel like they've been lied to if we tell them this is a totally bad way of writing applications considering they've been doing it this way throughout the entirety of the course.
 - However, also explain that even though this works it is also still asking A LOT of the browser, as it is "dumb" when it comes to knowing exactly what data is being interfaced with and has to peek in at everything on the DOM even though only a little part could be getting changed. (If you're comfortable with this concept, briefly describe how the browser "reflows" & "repaints" when things change)
 - This leads to performance issues for the browser and a lot more code for the developer to manage when applications scale up. Remind students of how many moving parts there are on facebook.com's main "feed".
@@ -44,14 +45,14 @@
 - Just like jQuery is a library built to help support the developer with day-to-day DOM manipulation, other JavaScript packages have been released over the past few years to support developers in a tighter way. These are called **frameworks.**
   - Briefly explain that frameworks differentiate from libraries in that a library is more of a tool that can be employed wherever and how it is used is totally up to the developer, whereas frameworks may offer similar sets of tools but how they are used are dictated by the framework's rules and not the developers.
   - This means some "control" is taken away from the developer, but it is actually a good thing in most cases because it lets us focus on what we want to build and not worry about as many of the `what-if's` that often occur as the framework has already thought about it for us.
-- Explain how we're currently riding out the second major wave of frontend frameworks:
+- Explain how we're currently riding out the second major wave of front-end frameworks:
   - 1st wave: Ember, AngularJS (not the Angular that we know today), KnockoutJS
   - 2nd wave: Angular, React, Vue
 
 ## 4. Instructor: Slideshow (Why Vue?) - 3 Minutes
 
-- Explain that Vue is among one of the more recent frontend frameworks to enter the scene (it was released in 2014) but has gained a lot of steam and popularity in the development community, having over 130k stars on GitHub.
-- It is described as a "progressive framework", meaning you can start adding pieces of it into your existing frontend codebase one by one and not disrupt your overall application. This is unlike other frameworks which recommend a total adoption for it work properly.
+- Explain that Vue is among one of the more recent front-end frameworks to enter the scene (it was released in 2014) but has gained a lot of steam and popularity in the development community, having over 130k stars on GitHub.
+- It is described as a "progressive framework", meaning you can start adding pieces of it into your existing front-end codebase one by one and not disrupt your overall application. This is unlike other frameworks which recommend a total adoption for it work properly.
 - Since it came a little later than other frameworks and was built by a former Google employee (Google owns Angular), it is sometimes considered a "greatest-hits" collection of its peers as it has borrowed a lot of the great ideas they brought to the table and tried to simplify them into a smaller ecosystem (~24kb, which is small)
 
 ## 5: Instructor: Slideshow (Getting Up and Running) - 1 Minutes
