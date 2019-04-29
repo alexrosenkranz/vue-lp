@@ -1,4 +1,4 @@
-# Front-end Framework-it: An Introduction to Vue.js
+# Front-end Frameworks: An Introduction to Vue.js
 
 > The following lesson plan is assuming students have NOT learned React and this is their first introduction to a true front-end framework. It also assumes students HAVE gone through the Handlebars/templating unit, but mostly for the `{{ }}` familiarity, and that our current heavy usage of jQuery is in use over vanilla JS for DOM manipulation.
 
