@@ -13,8 +13,8 @@
 
 - Today's class is all about getting the students to understand that while how they've been building their applications to this point isn't wrong (we obviously made it this far without frontend frameworks), more data-rich applications are beginning to require a more organized and performant way of managing their frontend code.
 - This will involve giving a very brief overview of a developer's relationship with the DOM and how asking the browser to be so heavily involved in managing our data can slow things up overtime in both performance and development time in general.
-- Let the class know that today we will be introducing the concept of how Vue works with it's special `v-` syntax and how we can build HTML templates that are managed by utilizing a special constructor in the JavaScript code.
-- Also let them know this won't be the main way they end up building out Vue applications and we'll get to that in the next class, but it's important to see how simple it can be to integrate it's code into an already existing application so they aren't as intimidated by the unfamiliarity of it.
+- Let the class know that today we will be introducing the concept of how Vue works with its special `v-` syntax and how we can build HTML templates that are managed by utilizing a special constructor in the JavaScript code.
+- Also let them know this won't be the main way they end up building out Vue applications and we'll get to that in the next class, but it's important to see how simple it can be to integrate its code into an already existing application so they aren't as intimidated by the unfamiliarity of it.
 - Next class will be about starting from scratch using the CLI, but today will be more about syntax than application structure.
 
 ## [Vue Demo Slideshow](https://docs.google.com/presentation/d/17TIetDda1SFeQFZ71xoaWL-otdjTvuQljKX4ZaFKuIg/edit?usp=sharing)
@@ -42,8 +42,8 @@
 
 - Explain the idea of a developer being able to tightly package up related data needed for specific HTML tags but keeping all of that data in the JavaScript code itself rather than making the DOM hold onto it.
 - Just like jQuery is a library built to help support the developer with day-to-day DOM manipulation, other JavaScript packages have been released over the past few years to support developers in a tighter way. These are called **frameworks.**
-  - Briefly explain that frameworks differentiate from libraries in that a library is more of a tool that can be employed wherever and how it's used is totally up to the developer, whereas frameworks may offer similar sets of tools but how they are used are dictated by the framework's rules and not the developers.
-  - This means some "control" is taken away from the developer, but it's actually a good thing in most cases because it lets us focus on what we want to build and not worry about as many of the `what-if's` that often occur as the framework has already thought about it for us.
+  - Briefly explain that frameworks differentiate from libraries in that a library is more of a tool that can be employed wherever and how it is used is totally up to the developer, whereas frameworks may offer similar sets of tools but how they are used are dictated by the framework's rules and not the developers.
+  - This means some "control" is taken away from the developer, but it is actually a good thing in most cases because it lets us focus on what we want to build and not worry about as many of the `what-if's` that often occur as the framework has already thought about it for us.
 - Explain how we're currently riding out the second major wave of frontend frameworks:
   - 1st wave: Ember, AngularJS (not the Angular that we know today), KnockoutJS
   - 2nd wave: Angular, React, Vue
@@ -59,7 +59,7 @@
 - Navigate through the next slide and explain how we can get up and running with Vue in two different ways:
   - Including Vue's `<script>` tag in your HTML file and using their special templating syntax (think Handlebars)
   - Using Vue's CLI tool to build out and scaffold a full application with a lot of tooling bells and whistles, which may be overkill for people just starting out with Vue
-- For today, we'll be focusing on the first option. Explain that in the next class and as we get further into Vue development, the second option will ultimately be a better choice. But this first option is great for getting newcomers introduced to Vue's syntax, especially for those coming from a jQuery-reliant style of coding. And the best part is that the transition from the first option to the second option doesn't involve much more than understanding how it's used to scale out and modularize bigger applications.
+- For today, we'll be focusing on the first option. Explain that in the next class and as we get further into Vue development, the second option will ultimately be a better choice. But this first option is great for getting newcomers introduced to Vue's syntax, especially for those coming from a jQuery-reliant style of coding. And the best part is that the transition from the first option to the second option doesn't involve much more than understanding how it is used to scale out and modularize bigger applications.
 
 ## 6. Instructor: Create a "hello world" app - 12 minutes
 
@@ -98,7 +98,7 @@
 - Now navigate back to your two files in your text editor and walk through how you achieved this end result:
   - Point out how we are using handlebars-esque `{{ }}` templating syntax in a regular HTML file to denote where content will be going.
   - In the JavaScript code, point out the use of the `new Vue()` constructor create a new `Vue Instance` ([https://vuejs.org/v2/guide/instance.html](https://vuejs.org/v2/guide/instance.html))
-  - Then walk through the two main properties we provide the constructor (`el` and `data`) and ask the class what they *think* each one is up to and how it's being utilized in this example.
+  - Then walk through the two main properties we provide the constructor (`el` and `data`) and ask the class what they *think* each one is up to and how it is being utilized in this example.
 - Let them know that using Vue *can* be as simple as that, but what would be the point?
 - Demonstrate how content can be updated by opening up the console in Chrome and typing in `app.title = "New message here"` (make sure the console isn't blocking the page when you hit `enter` so they can see the HTML update in real time.
 - Don't spend too much time explaining what is actually happening here as we will touch upon it in a few minutes, but before that they should take it for a spin...
@@ -135,17 +135,17 @@
 - Open up the solution provided in the `Solved` folder and walk class through each commented line to explain how each one is working between the HTML and JS files.
 - Let them know that what we are doing with the `{{ }}` syntax is that we are telling certain areas of our HTML content to be "reactive" to any changes in the JavaScript. A simpler way of thinking about it is that we are giving that particular Vue Instance we created total control over that data and we can go through that Vue Instance to make any changes to the associated HTML content.
 - At this point, you may have said the term `Vue Instance` a few times, so make sure they understand what that means in simpler terms:
-  - It's basically Vue's way of packaging up an HTML element with it's associated content, data, and styles into a JavaScript object. This way we can keep all of our related information for that HTML element together.
-- Go over the bonus section and explain to the class how by default, Vue doesn't want to overstep it's boundaries by taking total control over each aspect of the associated HTML elements. This means that when we are building our HTML templates, we can decide what is static/unchanging or what can be maintained and updated by our Vue Instance:
+  - It is basically Vue's way of packaging up an HTML element with its associated content, data, and styles into a JavaScript object. This way we can keep all of our related information for that HTML element together.
+- Go over the bonus section and explain to the class how by default, Vue doesn't want to overstep its boundaries by taking total control over each aspect of the associated HTML elements. This means that when we are building our HTML templates, we can decide what is static/unchanging or what can be maintained and updated by our Vue Instance:
   - Static/Unchanging syntax: nothing different from regular HTML (class, id, href, etc) can all be the same if they won't ever be used or changed by the JavaScript code
-  - Dynamic/Changing syntax: Vue has a special syntax denoted by `v-` to bind or connect HTML attributes to it's associated Vue Instance
-  - More on this next...
+  - Dynamic/Changing syntax: Vue has a special syntax denoted by `v-` to bind or connect HTML attributes to its associated Vue Instance
+  - More on this in the next slides and activity.
 
 ## 9. Instructor: Slideshow (`v-` Directives) - 5 minutes
 
-- Reiterate how you employed the `v-` syntax in the previous activity's bonus to make a specific part of the HTML tag more functional or dynamic with it's associated JavaScript data.
+- Reiterate how you employed the `v-` syntax in the previous activity's bonus to make a specific part of the HTML tag more functional or dynamic with its associated JavaScript data.
 - Let them know we'll be touching upon the most important ones today, one-by-one
-- At first glance one might think this is an interesting design choice to make the syntax have the `v-`, but it makes it easier to glance at one's HTML structure and notice what's controlled by it's Vue counterpart fairly quick.
+- At first glance one might think this is an interesting design choice to make the syntax have the `v-`, but it makes it easier to glance at one's HTML structure and notice what's controlled by its Vue counterpart fairly quick.
 
 ## 10. Partners: Add Comments to `v-` Examples - 18 minutes
 
@@ -158,12 +158,12 @@
   2. v-if.html
   3. v-for.html
   4. v-on.html
-- Don't rush through these, really take the time and ensure that you and those around you understand what is happening in each example. Even go as far as to edit the code and update it's logic to be something you create instead.
+- Don't rush through these, really take the time and ensure that you and those around you understand what is happening in each example. Even go as far as to edit the code and update its logic to be something you create instead.
 
 ## 11. Everyone: Review Add Comments to `v-` Examples - 10 minutes
 
 - Open up and walk through each file in the `Unsolved` folder.
 - Call on students/groups at random to help with filling in the blanks for each section.
 - Make sure to open and reference the documentation associated with each file to ensure students know where they can find information about this syntax and functionality.
-- The `v-for="item of items` syntax for the may confuse some students as `for (item of items)` is a somewhat newer piece of JavaScript, so if that's tripping anyone up make sure to provide a little more detail into that and let them know it's really nothing more than their version of a `for loop`... kind of like how Handlebars has its `{{#each}}` syntax
+- The `v-for="item of items` syntax for the may confuse some students as `for (item of items)` is a somewhat newer piece of JavaScript, so if that's tripping anyone up make sure to provide a little more detail into that and let them know it is really nothing more than their version of a `for loop`... kind of like how Handlebars has its `{{#each}}` syntax
 - These for concepts are incredibly important to understanding how to work with Vue and they will be used A LOT, but there is another important piece to cover... handling form element inputs
