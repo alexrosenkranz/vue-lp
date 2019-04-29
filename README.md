@@ -69,32 +69,32 @@
 - Try and follow this process:
   - Create HTML page and include Vue's script tag
 
-        ```html
-        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-        ```
+  ```html
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  ```
 
-    - In the HTML, include something along the lines of:
+  - In the HTML, include something along the lines of:
 
-        ```html
-          <div id="app">
-            <h1> {{ title }} </h1>
-            <p> {{ message }} </p>
-          </div>
-        ```
+  ```html
+    <div id="app">
+      <h1> {{ title }} </h1>
+      <p> {{ message }} </p>
+    </div>
+  ```
 
-    - Then either write the script inline with the HTML or create a separate `.js` file and include:
+  - Then either write the script inline with the HTML or create a separate `.js` file and include:
 
-        ```javascript
-          const app = new Vue({
-            el: "#app",
-            data: {
-              title: "Welcome to Vue!",
-              message: "This data is in the <p> tag!"
-            }
-          });
-        ```
+  ```javascript
+    const app = new Vue({
+      el: "#app",
+      data: {
+        title: "Welcome to Vue!",
+        message: "This data is in the <p> tag!"
+      }
+    });
+  ```
 
-    - Then open the HTML page in the browser and show the result.
+  - Then open the HTML page in the browser and show the result.
 
 - Now navigate back to your two files in your text editor and walk through how you achieved this end result:
   - Point out how we are using handlebars-esque `{{ }}` templating syntax in a regular HTML file to denote where content will be going.
