@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+  <link rel="stylesheet" href="style.css">
+  <title>V-For</title>
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <div class="row justify-content-center">
+      <div class="col-5">
+        <!-- set up HTMl template for Vue -->
+        <div class="card" id="shopping-list">
+          <!-- bind {{ listTitle }} to data.listTitle value -->
+          <h4 class="card-header"> {{ listTitle }} </h4>
+          <ul class="list-group list-group-flush">
+            <!-- use v-for syntax to iterate over data.shoppingListArr and print out <li> for each one -->
+            <!-- syntax => v-for="item of arrayName" where "item" can be any name to represent the value of the arr[i] -->
+            <!-- https://vuejs.org/v2/guide/list.html -->
+            <li class="list-group-item" v-for="item of shoppingListArr">
+              <!-- value of the arr[i] -->
+              {{ item }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    // create new Vue instance
+    const shoppingList = new Vue({
+      el: "#shopping-list",
+      // define data bound to HTML template
+      data: {
+        listTitle: "Awesome Shopping List",
+        // create array to iterate using v-for
+        shoppingListArr: [
+          "OJ",
+          "Purple Stuff",
+          "Soda",
+          "Sunny D!"
+        ]
+      }
+    });
+  </script>
+
+</body>
+
+</html>

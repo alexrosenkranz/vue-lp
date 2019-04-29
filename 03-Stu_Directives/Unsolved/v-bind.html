@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+  <link rel="stylesheet" href="style.css">
+  <title>V-Bind</title>
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <div class="row justify-content-center align-items-stretch">
+      <div class="col-4">
+        <!-- Vue template starts here -->
+        <div class="card" id="bind-demo">
+          <!--  -->
+          <!-- https://vuejs.org/v2/api/#v-bind -->
+          <img v-bind:src="imgUrl" alt="Image" class="card-img-top img-fluid">
+          <div class="card-body">
+            <!--  -->
+            <h5 class="card-title">{{ title }}</h5>
+            <!--  -->
+            <p class="card-text">{{ text }}</p>
+            <!--  -->
+            <!-- https://vuejs.org/v2/api/#v-bind -->
+            <!-- https://vuejs.org/v2/guide/class-and-style.html -->
+            <a v-bind:class="btnData.classes" v-bind:href="btnData.link"> {{ btnData.text }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    // 
+    const card = new Vue({
+      // 
+      el: "#bind-demo",
+      // 
+      data: {
+        // 
+        title: "Card Header",
+        // 
+        imgUrl: "https://images.pexels.com/photos/132037/pexels-photo-132037.jpeg",
+        // 
+        text: "typewriter asymmetrical gastropub meggings raw denim chillwave Helvetica kale chips you probably haven't heard of them pickled quinoa McSweeney's Tumblr fingerstache messenger bag fashion axe authentic Marfa wolf synth narwhal",
+        // 
+        btnData: {
+          // 
+          link: "https://vuejs.org",
+          // 
+          text: "Button Link Text",
+          // 
+          classes: {
+            "btn": true,
+            "btn-block": true,
+            "btn-success": true
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

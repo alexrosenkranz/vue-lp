@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+  <link rel="stylesheet" href="style.css">
+  <title>V-If</title>
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <div class="row justify-content-center">
+      <div class="col-5">
+        <!--  -->
+        <div class="card" id="conditional">
+          <h4 class="card-header">Conditional Rendering</h4>
+          <div class="card-body">
+            <!--  -->
+            <!-- https://vuejs.org/v2/guide/conditional.html -->
+            <h4 v-if="isVueCool">🆒 Very Cool!</h4>
+            <!--  -->
+            <h4 v-else>😒 Not Cool!</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+  <script>
+    const conditional = new Vue({
+      //
+      el: "#conditional",
+      // 
+      data: {
+        // 
+        // set this to false and see what happens!
+        isVueCool: true
+      }
+    })
+  </script>
+
+</body>
+
+</html>

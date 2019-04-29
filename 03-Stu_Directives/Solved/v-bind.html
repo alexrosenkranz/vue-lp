@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+  <link rel="stylesheet" href="style.css">
+  <title>V-Bind</title>
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <div class="row justify-content-center align-items-stretch">
+      <div class="col-4">
+        <!-- Vue template starts here -->
+        <div class="card" id="bind-demo">
+          <!-- use v-bind:src to let Vue maintain "src" attribute data -->
+          <!-- https://vuejs.org/v2/api/#v-bind -->
+          <img v-bind:src="imgUrl" alt="Image" class="card-img-top img-fluid">
+          <div class="card-body">
+            <!-- use {{ }} to let Vue maintain title data -->
+            <h5 class="card-title">{{ title }}</h5>
+            <!-- use {{ }} to let Vue maintain text data -->
+            <p class="card-text">{{ text }}</p>
+            <!-- use combination of v-bind and {{ }} to maintain link's classes, href, and text data -->
+            <!-- https://vuejs.org/v2/api/#v-bind -->
+            <!-- https://vuejs.org/v2/guide/class-and-style.html -->
+            <a v-bind:class="btnData.classes" v-bind:href="btnData.link"> {{ btnData.text }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- include script to use Vue -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    // create new Vue instance and store object in 'card'
+    const card = new Vue({
+      // provide context as to what HTML template this Vue instance managing
+      el: "#bind-demo",
+      // bind data from key names to corresponding HTML template references
+      data: {
+        // bound to {{ title }}
+        title: "Card Header",
+        // bound to v-bind:src="imgUrl"
+        imgUrl: "https://images.pexels.com/photos/132037/pexels-photo-132037.jpeg",
+        // bound to {{ text }}
+        text: "typewriter asymmetrical gastropub meggings raw denim chillwave Helvetica kale chips you probably haven't heard of them pickled quinoa McSweeney's Tumblr fingerstache messenger bag fashion axe authentic Marfa wolf synth narwhal",
+        // not directly bound to anything but packages related data
+        btnData: {
+          // bound to v-bind:href="btnData.link"
+          link: "https://vuejs.org",
+          // bound to {{ btnData.text }}
+          text: "Button Link Text",
+          // bound to v-bind:class="btnData.classes"
+          classes: {
+            // set to true or false for conditional class/style applying
+            "btn": true,
+            "btn-block": true,
+            "btn-success": true
+          }
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>

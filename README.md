@@ -17,7 +17,7 @@
 - Also let them know this won't be the main way they end up building out Vue applications and we'll get to that in the next class, but it's important to see how simple it can be to integrate it's code into an already existing application so they aren't as intimidated by the unfamiliarity of it.
 - Next class will be about starting from scratch using the CLI, but today will be more about syntax than application structure.
 
-[Vue Demo LP](https://docs.google.com/presentation/d/17TIetDda1SFeQFZ71xoaWL-otdjTvuQljKX4ZaFKuIg/edit?usp=sharing)
+## [Vue Demo Slideshow](https://docs.google.com/presentation/d/17TIetDda1SFeQFZ71xoaWL-otdjTvuQljKX4ZaFKuIg/edit?usp=sharing)
 
 ---
 
@@ -42,7 +42,7 @@
 ## 3. Instructor: Slideshow (Solution & Frameworks slides) -  3 minutes
 
 - Explain the idea of a developer being able to tightly package up related data needed for specific HTML tags but keeping all of that data in the JavaScript code itself rather than making the DOM hold onto it.
-- Just like jQuery is a library built to help support the developer with day-to-day DOM manipulation, other JavaScript packages have been released over the past few years to support developers in a tighter way. These are called f**rameworks.**
+- Just like jQuery is a library built to help support the developer with day-to-day DOM manipulation, other JavaScript packages have been released over the past few years to support developers in a tighter way. These are called **frameworks.**
   - Briefly explain that frameworks differentiate from libraries in that a library is more of a tool that can be employed wherever and how it's used is totally up to the developer, whereas frameworks may offer similar sets of tools but how they are used are dictated by the framework's rules and not the developers.
   - This means some "control" is taken away from the developer, but it's actually a good thing in most cases because it lets us focus on what we want to build and not worry about as many of the `what-if's` that often occur as the framework has already thought about it for us.
 - Explain how we're currently riding out the second major wave of frontend frameworks:
@@ -146,10 +146,23 @@
 - Let them know we'll be touching upon the most important ones today, one-by-one
 - At first glance one might think this is an interesting design choice to make the syntax have the `v-`, but it makes it easier to glance at one's HTML structure and notice what's controlled by it's Vue counterpart fairly quick.
 
-## 10. Partners: Add Comments to `v-` Examples - 15 minutes
+## 10. Partners: Add Comments to `v-` Examples - 20 minutes
 
 ### Instructions
 
 - Working with those around you, go through each file in `03-Stu_Directives/Unsolved` one-by-one and answer what each line with a `//` over it is doing.
 - With each file, make sure you read up on that `Directive` in Vue's documentation (links are provided in each file)
+- You should go through these in this order:
+  1. v-bind.html
+  2. v-if.html
+  3. v-for.html
+  4. v-on.html
 - Don't rush through these, really take the time and ensure that you and those around you understand what is happening in each example. Even go as far as to edit the code and update it's logic to be something you create instead.
+
+## 11. Everyone: Review Add Comments to `v-` Examples - 10 minutes
+
+- Open up and walk through each file in the `Unsolved` folder.
+- Call on students/groups at random to help with filling in the blanks for each section.
+- Make sure to open and reference the documentation associated with each file to ensure students know where they can find information about this syntax and functionality.
+- The `v-for="item of items` syntax for the may confuse some students as `for (item of items)` is a somewhat newer piece of JavaScript, so if that's tripping anyone up make sure to provide a little more detail into that and let them know it's really nothing more than their version of a `for loop`... kind of like how Handlebars has its `{{#each}}` syntax
+- These for concepts are incredibly important to understanding how to work with Vue and they will be used A LOT, but there is another important piece to cover... handling form element inputs
