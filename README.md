@@ -5,8 +5,8 @@
 ## Class Objectives
 
 - Students will be formally introduced to the concept of front-end frameworks, what problems they help developers with, and why they're so popular in modern web development.
-- Students will use learn how to integrate Vue into an existing application and how to start from scratch.
-- Students will learn Vue's special `v-` "directive" attribute syntax to bind data, styles, and functionality to associated HTML tags.
+- Students will understand how to incorporate Vue into an application.
+- Students will learn Vue's special `v-` "directive" attribute syntax to make their UI pieces "reactive" to any change in associated data, known as "state".
 - Students will learn about the concept of building components so pieces of the UI can be reused.
 - NEXT CLASS → Students will be introduced to the Vue CLI tool to help scaffold out more modular Vue applications that help with organization and structure.
 
@@ -166,5 +166,5 @@
 - Open up and walk through each file in the `Unsolved` folder.
 - Call on students/groups at random to help with filling in the blanks for each section.
 - Make sure to open and reference the documentation associated with each file to ensure students know where they can find information about this syntax and functionality.
-- The `v-for="item of items` syntax for the may confuse some students as `for (item of items)` is a somewhat newer piece of JavaScript, so if that's tripping anyone up make sure to provide a little more detail into that and let them know it is really nothing more than their version of a `for loop`... kind of like how Handlebars has its `{{#each}}` syntax
+- The `v-for="item of items` syntax for the may confuse some students as `for (item of items)` is a somewhat newer piece of JavaScript, so if that's tripping anyone up make sure to provide a little more detail into that and let them know it is really nothing more than their version of a `for loop`... kind of like how Handlebars has its `{{#each}}` syntax.
 - These for concepts are incredibly important to understanding how to work with Vue and they will be used A LOT, but there is another important piece to cover... handling form element inputs
