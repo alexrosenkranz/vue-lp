@@ -69,7 +69,9 @@
 - Try and follow this process:
   - Create HTML page and include Vue's script tag
 
-        ```<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>```
+        ```html
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        ```
 
     - In the HTML, include something along the lines of:
 
